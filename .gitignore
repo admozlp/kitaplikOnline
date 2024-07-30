@@ -1,4 +1,5 @@
 # Project exclude paths
+/.idea/
 /book-service/.gradle/
 /book-service/build/
 /book-service/build/classes/java/main/
@@ -14,5 +15,3 @@
 /config-server/.gradle/
 /config-server/build/
 /config-server/build/classes/java/main/
-
-/.idea
