@@ -11,3 +11,8 @@
 /library-service/.gradle/
 /library-service/build/
 /library-service/build/classes/java/main/
+/config-server/.gradle/
+/config-server/build/
+/config-server/build/classes/java/main/
+
+/.idea
