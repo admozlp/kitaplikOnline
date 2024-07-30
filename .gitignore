@@ -1,0 +1,13 @@
+# Project exclude paths
+/book-service/.gradle/
+/book-service/build/
+/book-service/build/classes/java/main/
+/eureka-server/.gradle/
+/eureka-server/build/
+/eureka-server/build/classes/java/main/
+/gateway/.gradle/
+/gateway/build/
+/gateway/build/classes/java/main/
+/library-service/.gradle/
+/library-service/build/
+/library-service/build/classes/java/main/

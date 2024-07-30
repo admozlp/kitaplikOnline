@@ -1,0 +1,38 @@
+### Gateway Application Configuration
+server:
+  port: 8080
+spring:
+  application:
+    name: gateway
+  cloud:
+    gateway:
+      mvc:
+        routes:
+          - id: book-service
+            uri: lb://book-service
+            predicates:
+              - Path=/api/v1/books/**
+          - id: library-service
+            uri: lb://library-service
+            predicates:
+              - Path=/api/v1/libraries/**
+### Actuator Configuration ###
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+  tracing:
+    sampling:
+      probability: 1.0
+    enabled: true
+
+
+### Eureka Configuration ###
+eureka:
+  instance:
+    prefer-ip-address: true
+  client:
+    service-url:
+      defalt-zone: ${EUREKA_URI:http://localhost:8761/eureka/}
+
