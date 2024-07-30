@@ -11,15 +11,17 @@ spring:
           - id: book-service
             uri: lb://book-service
             predicates:
-              - Path=/api/v1/books/**
+              - Path=/api/v1/books/**, /book/actuator/**
           - id: library-service
             uri: lb://library-service
             predicates:
-              - Path=/api/v1/libraries/**
+              - Path=/api/v1/libraries/**, /library/actuator/**
+
 ### Actuator Configuration ###
 management:
   endpoints:
     web:
+      base-path: /gateway/actuator
       exposure:
         include: "*"
   tracing:
